@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.wuxm.lightingmvp.editarticle.EditArticleActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_edit_article"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_home"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:minHeight="50dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+
+
+                <TextView
+                    android:id="@+id/tv_publish"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="发布"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/AppBarLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="title"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/et_desc"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/et_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="top"
+            android:hint="content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llayout_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_title"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_take_photo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="take photo" />
+
+                <Button
+                    android:id="@+id/btn_album"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="from Album" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:scaleType="centerInside"
+                android:id="@+id/iv_image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
